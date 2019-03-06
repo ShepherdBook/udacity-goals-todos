@@ -43,7 +43,7 @@ export function handleRemoveTodo(todo) {
 
     return API.deleteTodo(todo.id)
       .catch(() => {
-        dispatch(removeTodo(todo))
+        dispatch(addTodo(todo))
         alert('could not delete todo')
       })
   }
